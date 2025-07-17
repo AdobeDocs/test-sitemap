@@ -269,6 +269,7 @@ jobs:
           connection-string: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
           remove-existing-files: "true"
           exclude-subfolder: ${{ needs.set-state.outputs.exclude_subfolder }}
+          public-access-policy: container
       - name: Purge Fastly Cache
         uses: AdobeDocs/gatsby-fastly-purge-action@master
         with:
