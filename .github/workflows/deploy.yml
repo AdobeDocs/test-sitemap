@@ -158,7 +158,7 @@ jobs:
           enabled-static-website: "true"
           source: "public"
           target: ${{ needs.set-state.outputs.path_prefix }}
-          connection-string: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
+          connection-string: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
           remove-existing-files: "true"
           exclude-subfolder: ${{ needs.set-state.outputs.exclude_subfolder }}
           public-access-policy: container
