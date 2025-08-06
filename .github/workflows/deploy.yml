@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       deploy_prod: ${{ contains(github.event.inputs.env, 'prod') }}
-      deploy_dev: ${{ contains(github.event.inputs.env, 'dev') }}
+      deploy_dev: ${{ contains(github.event.inputs.env, 'stage') }}
       path_prefix: ${{ steps.get_path_prefix.outputs.path_prefix }}
     steps:
       - name: Checkout
