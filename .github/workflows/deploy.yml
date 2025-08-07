@@ -56,7 +56,8 @@ jobs:
           enabled-static-website: "true"
           source: "public"
           target: "/"
-          connection-string: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
+          connection-string-read: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
+          connection-string-publish: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
           remove-existing-files: "true"
           exclude-subfolder: ${{ needs.set-state.outputs.exclude_subfolder }}
           public-access-policy: container
@@ -94,7 +95,8 @@ jobs:
           enabled-static-website: "true"
           source: "public"
           target: "/"
-          connection-string: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
+          connection-string-read: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
+          connection-string-publish: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
           remove-existing-files: "true"
           exclude-subfolder: ${{ needs.set-state.outputs.exclude_subfolder }}
           public-access-policy: container
